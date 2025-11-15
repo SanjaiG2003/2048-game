@@ -1,31 +1,28 @@
-🧩 2048 Game
+🧩 2048 Game (JavaScript)
 
-A fun, browser-based version of the classic 2048 puzzle game made with HTML, CSS, and JavaScript.
+A simple browser-based implementation of the classic 2048 puzzle game, built using HTML, CSS, and JavaScript.
+Features smooth tile sliding, merging logic, score tracking, and keyboard controls.
 
-Merge tiles, reach 2048, and challenge yourself! 😎
+🔹 How to Play
 
-🎮 How to Play
+Use Arrow keys to move tiles (Left, Right, Up, Down)
 
-Use the arrow keys ⬅️➡️⬆️⬇️ to move the tiles
+Tiles with the same number merge when they collide
 
-Merge tiles with the same number to get bigger numbers ➕
+Reach 2048 to win
 
-Try to reach 2048 🎯
+Game ends when no moves are left
 
-Game ends when no more moves are possible 💀
-
-✨ Features
+🔹 Features
 
 Classic 4×4 grid
 
-Smooth tile sliding and merging
+Tile merging & score updates
 
-Keeps track of your score 🏆
+Basic game-over detection
 
-Detects game over
+Clean and lightweight codebase
 
-💻 Run Locally
+🔹 Run Locally
 
-Clone or download this repo
-
-Open index.html in your browser 🌐
+Just open index.html in any browser.
