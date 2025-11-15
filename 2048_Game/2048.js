@@ -81,19 +81,23 @@ document.addEventListener("keyup",(e)=>{
     if(e.code =="ArrowLeft"){
         slideLeft();
          setTwo();
+         checkWin();  
     }
      else if(e.code =="ArrowRight"){
         slideRight();
          setTwo();
+         checkWin();  
     }
     else if(e.code =="ArrowUp"){
         slideUp();
          setTwo();
+         checkWin();  
 
     }
       else if(e.code =="ArrowDown"){
         slideDown();
          setTwo();
+         checkWin();  
 
     }
     document.getElementById("score").innerText = score;
@@ -136,9 +140,9 @@ function slideLeft() {
         }
     }
 
-    if (isGameOver()) {
-        alert("GAME OVER!");
-    }
+   if (!checkWin()) {  
+        if (isGameOver()) alert("💀 Game Over!");
+   }
 }
 
 function slideRight() {
@@ -156,9 +160,9 @@ function slideRight() {
         }
     }
 
-    if (isGameOver()) {
-        alert("GAME OVER!");
-    }
+   if (!checkWin()) {  
+        if (isGameOver()) alert("💀 Game Over!");
+   }
 }
 
  function slideUp(){
@@ -178,9 +182,9 @@ function slideRight() {
         }
     }
 
-    if (isGameOver()) {
-        alert("GAME OVER!");
-    }
+   if (!checkWin()) {  
+        if (isGameOver()) alert("💀 Game Over!");
+   }
  }
 
   function slideDown(){
@@ -198,9 +202,9 @@ function slideRight() {
         }
     }
 
-    if (isGameOver()) {
-        alert("GAME OVER!");
-    }
+   if (!checkWin()) {  
+        if (isGameOver()) alert("💀 Game Over!");
+   }
  }
 
  function isGameOver() {
@@ -233,3 +237,16 @@ function slideRight() {
     
     return true;
 }
+
+function checkWin() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < column; c++) {
+            if (board[r][c] === 2048) {
+                alert("🎉 Congratulations! You reached 2048! 🎉");
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
